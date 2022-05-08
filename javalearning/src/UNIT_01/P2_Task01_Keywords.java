@@ -11,36 +11,38 @@ public static void main(String[] args) {
 		
 		//variable name
 		//Syntax error on token "double", invalid VariableDeclaratorId
-		int double = 12;
+		int age =23;
+		int b=2;
+		int c=age+b;
+		System.out.println(c);
+}
 		
 		//function names cannot be a reserved word
 		
-		int new() {
+		int news() {
 			
 			//sysout[ctrl + space]
-			System.out.println();
+			System.out.println("hello");
 			
 			//Error, Void methods cannot return a value
 			return 0;
 		}
 		
-		int a=10;
-		a=11;
+		
 		
 		//class name[Given below]
 		
 		//object
 		//object  name can never be any keywords in java
 		
-		ABC int = new ABC();
+		ABC fine = new ABC();
 		//obj.display();			
 		
-	}
+	
 
 }
 
 //class can never be any keywords we have in java
-class int{
+class fine{
 	
-}
 }
