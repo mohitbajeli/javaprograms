@@ -87,13 +87,72 @@ class exception{
         try{
             useofThrow(17);
         }catch (Exception e){
-            //TODO Auto generated catch block
+
+        	//TODO Auto generated catch block
             e.printStackTrace();
         }
         finally{
             System.out.println("The 'try catch' block is finished");
         }
     }
+
+
+void checkedAndUncheckedException() {
+
+	/*
+	 * Unchecked Exception: Run time catching - Here we are dividing by 0 - which
+	 * will not be caught at compile time - as there is no mistake but caught at
+	 * runtime - because it is mathematically incorrect
+	 */
+	int x = 0;
+	int y = 10;
+	int z = y / x;
+
+	System.out.println(z);
+
+	// Checked Exception [Run this code over terminal and check compiler error]
+	try {
+		useofThrow(19);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+}
+
+void manualExceptionThrow() {
+
+	try {
+
+		// Have to use try and Catch here!
+		calculateperimeter(-1);
+	} catch (Exception e) {
+		System.out.println(e.getMessage());
+	}
+
+}
+
+void calculateperimeter(int r) throws ManualException {
+
+	if (r < 0) {
+		throw new ManualException();
+	}
+
+	double perimeter = 2*3.14*r*r;
+	System.out.println(perimeter);
+
+}
+
+}
+
+@SuppressWarnings("serial")
+class ManualException extends Exception {
+
+@Override
+public String getMessage() {
+	String detailMessage = "exception occured in calculating perimeter!";
+	return detailMessage;
+}
 
 }
 public class Exceptioninjava{
@@ -109,6 +168,6 @@ public class Exceptioninjava{
         obj.indexOutofBoundException();
         obj.nullPointerException();
         obj.useofThrow_And_Finally();
-        obj.useofThrow(12);
+       
     }
 }
