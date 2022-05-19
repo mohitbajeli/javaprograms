@@ -168,6 +168,6 @@ public class Exceptioninjava{
         obj.indexOutofBoundException();
         obj.nullPointerException();
         obj.useofThrow_And_Finally();
-       
+       obj.useofThrow(78);
     }
 }
