@@ -77,13 +77,19 @@ class exception{
     }
     void useofThrow(int age) throws Exception{
         if(age<18){
-            throw new Exception();
+        	try {
+        	throw new Exception();
         }
-        else{
+        	catch(Exception e)
+        	{
+        		System.out.println(e.getMessage());
+        	}
+        	}
+        else {
             System.out.println("You are allowed to enter");
         }
     }
-    void useofThrow_And_Finally() {
+     void useofThrow_And_Finally() {
         try{
             useofThrow(17);
         }catch (Exception e){
@@ -97,13 +103,13 @@ class exception{
     }
 
 
-void checkedAndUncheckedException() {
+ void checkedAndUncheckedException() {
 
 	/*
 	 * Unchecked Exception: Run time catching - Here we are dividing by 0 - which
 	 * will not be caught at compile time - as there is no mistake but caught at
 	 * runtime - because it is mathematically incorrect
-	 */
+	*/ 
 	int x = 0;
 	int y = 10;
 	int z = y / x;
@@ -158,16 +164,21 @@ public String getMessage() {
 public class Exceptioninjava{
 
 
-    public static void main(String args[]) {
+    public static void main(String args[])  {
         exception obj=new exception();
 //  obj.basicException();
-//  obj.handelException();
-//  obj.multipleCatch();
+  obj.handleException();
+  obj.multipleCatch();
 //  obj.inputMinsmatchException();
 //  obj.stackOverFlowError(2);
         obj.indexOutofBoundException();
         obj.nullPointerException();
         obj.useofThrow_And_Finally();
-       obj.useofThrow(78);
+        try {
+			obj.useofThrow(8);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 }
