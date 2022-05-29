@@ -1,6 +1,6 @@
 package javapracticeques;
 import java.util.Scanner;
-class Mysexception extends Exception
+class Myexception1 extends Exception
 {
 	@Override
 	public String getMessage()
@@ -71,7 +71,7 @@ public class q1 {
        if(ind>3)
        {
     	   try {
-    	   throw new MysException();
+    	   throw new MyException1();
        }
        
     	   catch(Exception e)
