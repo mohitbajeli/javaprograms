@@ -1,0 +1,2 @@
+module Swingproject {
+}
